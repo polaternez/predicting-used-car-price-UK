@@ -1,9 +1,10 @@
 # UK Used Car Price Estimator: Project Overview 
-* Created a tool that estimates data science salaries (MAE ~ $ 11K) to help data scientists negotiate their income when they get a job.
-* Scraped over 1000 job descriptions from glassdoor using python and selenium
-* Engineered features from the text of each job description to quantify the value companies put on python, excel, aws, and spark. 
-* Optimized Linear, Lasso, and Random Forest Regressors using GridsearchCV to reach the best model. 
-* Built a client facing API using flask 
+* The tool that predicts used car prices was created for new car buyers.
+* Take 100,000 UK Used Car Data set from Kaggle.
+* Exploratory Data Analysis (EDA)
+* Feature engineering
+* Train different models and evaluate them using cross validation.
+* Built a client facing API using Flask 
 
 ## Code and Resources Used 
 **Python Version:** 3.7  
@@ -34,5 +35,6 @@ Thus, Random Forest model has the least MAE, but is very slow compared to other 
 ## Productionization 
 In this step, I created the UI with the Flask. API endpoint assistance receives a request and returns the estimated vehicle price.
 
+![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/flask-api.png "UK Used Car Price Estimator")
 
 
