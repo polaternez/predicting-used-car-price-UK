@@ -18,23 +18,24 @@ that contains car brands
 ## EDA
 I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
 
-![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/price_dist.jpg "Car Price Distribution ")
-![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/age.jpg "Car Price by Age")
-![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/brand.jpg "Car Price by Brand")
-![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/correlation.jpg "Correlation")
+![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/images/price_dist.jpg "Car Price Distribution")
+![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/images/age.jpg "Car Price by Age")
+![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/images/brand.jpg "Car Price by Brand")
+![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/images/correlation.jpg "Correlation")
 
 ## Model Building 
 
 First, We discard redundant columns, then split the data into train and tests sets with a test size of 20%. After that train and test sets scaling with standardization.   
 
 We try five distinct models and evaluate them using Mean Absolute Error. Then we get the following results:
-![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/model_performance.png "Model Performances")
+
+![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/images/model_performance.png "Model Performances")
 
 Thus, Random Forest model has the least MAE, but is very slow compared to other models. That's why we choose the XGBoost model.
 
 ## Productionization 
 In this step, I created the UI with the Flask. API endpoint assistance receives a request and returns the estimated vehicle price.
 
-![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/flask-api.png "UK Used Car Price Estimator")
+![alt text](https://github.com/polaternez/UK_used_car_proj/blob/master/images/flask-api.png "UK Used Car Price Estimator")
 
 
