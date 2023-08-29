@@ -1,5 +1,5 @@
 # UK Used Car Price Estimator: Project Overview 
-* The tool that predicts used car prices was created for new car buyers.
+The tool that predicts used car prices was created for new car buyers.
 * Take 100,000 UK Used Car Data set from Kaggle.
 * Exploratory Data Analysis (EDA)
 * Feature engineering
