@@ -6,7 +6,7 @@ import numpy as np
 
 
 app = Flask(__name__)
-model = pickle.load(open("models/final_model.pkl", "rb"))
+model = pickle.load(open("saved_models/final_model.pkl", "rb"))
 
 @app.route("/")
 def home():
@@ -14,14 +14,16 @@ def home():
 
 @app.route("/predict", methods=["POST"])
 def predict():
-    brand = float(request.form["brand"])
-    transmission = float(request.form["transmission"])
-    age = 2021 - float(request.form["year"])
+    # get features from request form
     mileage = np.log10(float(request.form["mileage"]))
     mpg = float(request.form["mpg"])
     engineSize = float(request.form["engineSize"])
+    age = 2021 - float(request.form["year"])
+    brand = float(request.form["brand"])
+    transmission = float(request.form["transmission"])
     new_data = np.array([mileage, mpg, engineSize, age, brand, transmission])
 
+    # prediction
     prediction = model.predict(new_data.reshape(1, 6))
     output = round(prediction[0], 2)
 
@@ -30,11 +32,13 @@ def predict():
 @app.route("/predict_api", methods=["POST"])
 def predict_api():
     '''
-    For direct API calls trought request
+    For direct API calls through request
     '''
     request_json = request.get_json()
     new_data = [float(x) for x in request_json["input"]]
     features = np.array(new_data)
+
+    # prediction
     prediction = model.predict(features.reshape(1, 6))
     output = prediction[0]
     
