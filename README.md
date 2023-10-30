@@ -9,8 +9,9 @@ The tool that predicts used car prices was created for new car buyers.
 ## Code and Resources Used 
 **Python Version:** 3.10  
 **Packages:** numpy, pandas, matplotlib, seaborn, sklearn, xgboost, flask, json, pickle  
+**Flask API Requirements:**  ```pip install -r requirements.txt```  
 **Create Anaconda Environment for Flask API:**  ```conda env create -n <ENVNAME> -f environment.yaml```  
-**For Dataset:** https://www.kaggle.com/datasets/adityadesai13/used-car-dataset-ford-and-mercedes 
+**Dataset:** https://www.kaggle.com/datasets/adityadesai13/used-car-dataset-ford-and-mercedes 
 
 ## Data Cleaning
 Lucky we are getting data from Kaggle and that data has already been cleared. We only consolidate all downloaded datasets and create 'brand' column 
