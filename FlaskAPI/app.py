@@ -29,7 +29,7 @@ def predict():
 
     return render_template("index.html", prediction_text="Car price should be $ {}".format(output))
         
-@app.route("/predict_api", methods=["POST"])
+@app.route("/predict-api", methods=["POST"])
 def predict_api():
     '''
     For direct API calls through request
