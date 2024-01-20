@@ -8,7 +8,7 @@ The tool that predicts used car prices was created for new car buyers.
 
 ## Code and Resources Used 
 **Python Version:** 3.9  
-**Packages:** numpy, pandas, matplotlib, seaborn, sklearn, xgboost, flask, json, pickle  
+**Packages:** numpy, pandas, matplotlib, seaborn, scikit-learn, xgboost, flask, json, pickle  
 **Flask API Requirements:**  ```pip install -r requirements.txt```  
 **Create Anaconda Environment for Flask API:**  ```conda env create -n <ENVNAME> -f environment.yaml```  
 **Dataset:** https://www.kaggle.com/datasets/adityadesai13/used-car-dataset-ford-and-mercedes 
