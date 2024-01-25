@@ -1,4 +1,3 @@
-from hashlib import new
 import json
 from flask import Flask, request, jsonify, render_template
 import pickle
@@ -6,7 +5,7 @@ import numpy as np
 
 
 app = Flask(__name__)
-model = pickle.load(open("saved_models/final_model.pkl", "rb"))
+model = pickle.load(open("models/final_model.pkl", "rb"))
 
 @app.route("/")
 def home():
