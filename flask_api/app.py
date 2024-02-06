@@ -1,11 +1,14 @@
-import json
 from flask import Flask, request, jsonify, render_template
 import pickle
 import numpy as np
+import json
 
+
+
+# Load trained model
+model = pickle.load(open("models/final_model.pkl", "rb"))
 
 app = Flask(__name__)
-model = pickle.load(open("models/final_model.pkl", "rb"))
 
 @app.route("/")
 def home():
@@ -43,6 +46,7 @@ def predict_api():
     
     response = json.dumps({'response': str(output)})
     return response, 200
+
 
 if __name__ == "__main__":
     # app.run(host="0.0.0.0", port=5000)
