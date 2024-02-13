@@ -1,5 +1,5 @@
 # UK Used Car Price Estimator: Project Overview 
-This project aims to create a predictive tool for estimating used car prices, catering specifically to new car buyers in the UK.
+This project aims to create a predictive tool for estimating used car prices, catering specifically to new car buyers
 
 - Utilized a comprehensive dataset consisting of 100,000 UK used car records sourced from Kaggle.
 - Conducted thorough Exploratory Data Analysis (EDA) to gain insights into the dataset's characteristics.
@@ -17,9 +17,11 @@ This project aims to create a predictive tool for estimating used car prices, ca
 
 **Dataset:** https://www.kaggle.com/datasets/adityadesai13/used-car-dataset-ford-and-mercedes 
 
+
 ## Getting Data
-Lucky we are getting data from Kaggle and that data has already been cleared. We only consolidate all downloaded datasets and create 'brand' column 
-that contains car brands
+The project leverages the [100,000 UK Used Car Dataset](https://www.kaggle.com/datasets/adityadesai13/used-car-dataset-ford-and-mercedes ) obtained from Kaggle. This dataset consists of 100,000 listings for used cars from UK, carefully organized into separate files based on the car manufacturer. Each file provides detailed information about each car, including price, transmission type, mileage, fuel type, road tax band, miles per gallon (MPG), and engine size.
+
+
 ## EDA
 Conducted comprehensive EDA to understand the data distribution and relationships. Key highlights from the analysis include:
 
@@ -27,6 +29,7 @@ Conducted comprehensive EDA to understand the data distribution and relationship
 ![alt text](https://github.com/polaternez/predicting_used_car_price_UK/blob/master/reports/figures/age.jpg "Car Price by Age")
 ![alt text](https://github.com/polaternez/predicting_used_car_price_UK/blob/master/reports/figures/brand.jpg "Car Price by Brand")
 ![alt text](https://github.com/polaternez/predicting_used_car_price_UK/blob/master/reports/figures/correlation.jpg "Correlation")
+
 
 ## Model Building 
 - Split the data into train and test sets with a test size of 20%
