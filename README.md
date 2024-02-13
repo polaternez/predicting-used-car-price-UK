@@ -6,14 +6,16 @@ The tool that predicts used car prices was created for new car buyers.
 * Train different models and evaluate them using cross validation.
 * Built a client facing API using Flask 
 
-## Code and Resources Used 
+## Code and Resources 
 **Python Version:** 3.9  
 **Packages:** numpy, pandas, matplotlib, seaborn, scikit-learn, xgboost, flask, json, pickle  
-**Flask API Requirements:**  ```pip install -r requirements.txt```  
-**Create Anaconda Environment for Flask API:**  ```conda env create -n <ENVNAME> -f environment.yaml```  
+**Flask API Setup:**
+- ```pip install -r requirements.txt```  
+- ```conda env create -n <ENVNAME> -f environment.yaml``` (Anaconda Environment)
+
 **Dataset:** https://www.kaggle.com/datasets/adityadesai13/used-car-dataset-ford-and-mercedes 
 
-## Data Cleaning
+## Getting Data
 Lucky we are getting data from Kaggle and that data has already been cleared. We only consolidate all downloaded datasets and create 'brand' column 
 that contains car brands
 ## EDA
