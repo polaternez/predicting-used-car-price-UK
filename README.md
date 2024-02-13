@@ -1,10 +1,12 @@
 # UK Used Car Price Estimator: Project Overview 
-The tool that predicts used car prices was created for new car buyers.
-* Take 100,000 UK Used Car Data set from Kaggle.
-* Exploratory Data Analysis (EDA)
-* Feature engineering
-* Train different models and evaluate them using cross validation.
-* Built a client facing API using Flask 
+This project aims to create a predictive tool for estimating used car prices, catering specifically to new car buyers in the UK.
+
+- Utilized a comprehensive dataset consisting of 100,000 UK used car records sourced from Kaggle.
+- Conducted thorough Exploratory Data Analysis (EDA) to gain insights into the dataset's characteristics.
+- Employed advanced feature engineering techniques to enhance model performance.
+- Trained multiple machine learning models and rigorously evaluated their performance using cross-validation.
+- Developed a user-friendly API using Flask to provide seamless access to the predictive tool.
+
 
 ## Code and Resources 
 **Python Version:** 3.9  
@@ -19,7 +21,7 @@ The tool that predicts used car prices was created for new car buyers.
 Lucky we are getting data from Kaggle and that data has already been cleared. We only consolidate all downloaded datasets and create 'brand' column 
 that contains car brands
 ## EDA
-I looked at the distributions of the data and the value counts for the various categorical variables. Below are a few highlights from the pivot tables. 
+Conducted comprehensive EDA to understand the data distribution and relationships. Key highlights from the analysis include:
 
 ![alt text](https://github.com/polaternez/predicting_used_car_price_UK/blob/master/reports/figures/price_dist.jpg "Car Price Distribution")
 ![alt text](https://github.com/polaternez/predicting_used_car_price_UK/blob/master/reports/figures/age.jpg "Car Price by Age")
@@ -27,17 +29,18 @@ I looked at the distributions of the data and the value counts for the various c
 ![alt text](https://github.com/polaternez/predicting_used_car_price_UK/blob/master/reports/figures/correlation.jpg "Correlation")
 
 ## Model Building 
+- Split the data into train and test sets with a test size of 20%
+- Applied standardization to scale the train and test sets.
+- Utilizing cross-validation, we trained multiple models, evaluating their performance based on both Mean Absolute Error (MAE) and training time. After thorough analysis, the XGBoost model was selected due to its superior performance in terms of both predictive accuracy and efficiency
+- Fine-tune of the XGBoost model for better performance.
 
-First, We discard redundant columns, then split the data into train and tests sets with a test size of 20%. After that train and test sets scaling with standardization.   
-
-We try five distinct models and evaluate them using Mean Absolute Error. Then we get the following results:
+After cross-validation, the models showed the following performances:
 
 ![alt text](https://github.com/polaternez/predicting_used_car_price_UK/blob/master/reports/figures/model_performance.png "Model Performances")
 
-Thus, Random Forest model has the least MAE, but is very slow compared to other models. That's why we choose the XGBoost model.
 
 ## Productionization 
-In this step, I created the UI with the Flask. API endpoint assistance receives a request and returns the estimated vehicle price.
+Created a user interface using Flask. The API endpoint receives requests and returns estimated vehicle prices.
 
 ![alt text](https://github.com/polaternez/predicting_used_car_price_UK/blob/master/reports/figures/flask-api.png "UK Used Car Price Estimator")
 
