@@ -4,8 +4,7 @@ import numpy as np
 import json
 
 
-
-# Load trained model
+# Load pre-trained model
 model = pickle.load(open("models/final_model.pkl", "rb"))
 
 app = Flask(__name__)
@@ -28,8 +27,8 @@ def predict():
     # prediction
     prediction = model.predict(new_data.reshape(1, 6))
     output = round(prediction[0], 2)
-
-    return render_template("index.html", prediction_text="Car price should be $ {}".format(output))
+    return render_template("index.html",
+                            prediction_text="Car price should be $ {}".format(output))
         
 @app.route("/predict-api", methods=["POST"])
 def predict_api():
